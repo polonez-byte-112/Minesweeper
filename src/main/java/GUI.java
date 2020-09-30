@@ -102,7 +102,7 @@ public class GUI extends JFrame {
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 9; j++) {
 
-                if (revealed[i][j] == true && mines[i][j] == 1) {
+                if (revealed[i][j] == true && mines[i][j] == 1 && flagged[i][j]==false) {
                     defeat = true;
                     happinees = false;
 
@@ -267,15 +267,18 @@ public class GUI extends JFrame {
     public class Board extends JPanel {
 
         public void paintComponent(Graphics g) {
-        
+
 
             g.setColor(Color.DARK_GRAY);
             g.fillRect(0, 0, 1280, 800);
 
 
+
             for (int i = 0; i < 16; i++) {
                 for (int j = 0; j < 9; j++) {
                     g.setColor(Color.gray);
+
+
 
 
                     if(flagged[i][j]){
