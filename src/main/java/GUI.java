@@ -267,7 +267,7 @@ public class GUI extends JFrame {
     public class Board extends JPanel {
 
         public void paintComponent(Graphics g) {
-        this.setFocusable(true);
+        
 
             g.setColor(Color.DARK_GRAY);
             g.fillRect(0, 0, 1280, 800);
